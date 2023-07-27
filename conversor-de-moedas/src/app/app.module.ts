@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+// Importe o módulo HttpClientModule ao invés de HttpModule
+//import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ConversorModule } from './conversor';
 
@@ -11,7 +13,10 @@ import { ConversorModule } from './conversor';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FormsModule,
+    // Modifique aqui a importação do módulo também
+    //HttpModule,
+    HttpClientModule,
     ConversorModule
   ],
   providers: [],

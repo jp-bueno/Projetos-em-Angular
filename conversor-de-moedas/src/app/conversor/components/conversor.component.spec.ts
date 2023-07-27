@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConversorComponent } from './conversor.component';
-import { MoedaService } from '../services';
+import { ConversorService, MoedaService } from '../services';
 
 describe('ConversorComponent', () => {
   let component: ConversorComponent;
@@ -9,10 +9,10 @@ describe('ConversorComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ConversorComponent], providers: [MoedaService]
+      declarations: [ConversorComponent], providers: [MoedaService, ConversorService]
     });
     fixture = TestBed.createComponent(ConversorComponent);
-    component = fixture.componentInstance;
+    component = fixture.componentInstance; 
     fixture.detectChanges();
   });
 
